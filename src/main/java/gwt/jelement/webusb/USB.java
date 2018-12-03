@@ -53,6 +53,6 @@ public class USB extends EventTarget {
     public native Promise<USBDevice[]> getDevices();
     
     @JsMethod(name = "requestDevice")
-    public native Promise<USBDevice[]> requestDevice(USBDeviceRequestOptions options);
+    public native Promise<USBDevice> requestDevice(USBDeviceRequestOptions options);
     
 }
