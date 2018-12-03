@@ -181,7 +181,7 @@ public class Promise<F> implements IsObject {
 	 * @return The Promise returned is rejected if onRejected throws an exception; otherwise, it is resolved
 	 */
 	@JsMethod(name = "catch")
-	public native <T, X> Promise<T> catch_(Consumer<X> onRejected);
+	public native <X> Promise<F> catch_(Consumer<X> onRejected);
 
 	/**
 	 * Returns a Promise and deals with rejected cases only.
