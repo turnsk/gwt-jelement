@@ -66,7 +66,7 @@ public class Promise<F> implements IsObject {
 	 * @param reason rejection reason
 	 */
 	@JsMethod(name = "reject")
-	public static native Promise<Void> reject(Object reason);
+	public static native <F> Promise<F> reject(Object reason);
 
 	/**
 	 * Returns a Promise object that is resolved with the given value.
