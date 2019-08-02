@@ -42,7 +42,7 @@ public class Promise<F> implements IsObject {
 	 * It rejects with the reason of the first promise that rejects.
 	 */
 	@JsOverlay
-	public static Promise<?> all(Promise<?>... all) {
+	public static Promise<Array<?>> all(Promise<?>... all) {
 		return all(new Array<>(all));
 	}
 
@@ -59,7 +59,7 @@ public class Promise<F> implements IsObject {
 	 * It rejects with the reason of the first promise that rejects.
 	 */
 	@JsMethod(name = "all")
-	private static native Promise<?> all(Array<Promise<?>> iterable);
+	private static native Promise<Array<?>> all(Array<Promise<?>> iterable);
 
 	/**
 	 * Returns a Promise object that is rejected with the given reason.
